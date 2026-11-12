@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIGC &amp; Cultural Heritage | Julie Liu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['PT Serif', 'Georgia', 'serif'],
+                        sans: ['Roboto', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Roboto', system-ui, sans-serif; }
+        h1, h2, h3, h4, .serif { font-family: 'PT Serif', Georgia, serif; }
+        figure img { max-width: 100%; height: auto; }
+        .prose p { margin-bottom: 0.75rem; }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+    <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
+            <a href="../index.html" class="text-sm font-semibold tracking-wider uppercase text-slate-900 hover:text-sky-600 transition-colors font-serif">← Julie Liu</a>
+            <a href="../index.html#research" class="text-xs text-slate-500 hover:text-slate-900">Research Themes</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-20 px-6 max-w-4xl mx-auto">
+        <div class="mb-6">
+            <span class="text-xs text-amber-600 uppercase font-mono tracking-wider">Theme 04 · Unpublished Manuscript (Graduate Course Project)</span>
+            <h1 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mt-3 leading-tight">
+                Translation of Visual Heritage in a Cross-Cultural Context: A Study on Visual Style Translation of Yuanmingyuan Maps Using AIGC Technologies
+            </h1>
+            <p class="text-sm text-slate-500 mt-3">Author: Jiaqun Liu (Sole Author) · Affiliation: University of Macau (Graduate Course Project) · Status: Unpublished Manuscript</p>
+            
+            <div class="mt-5 flex flex-wrap gap-3">
+                <a href="../pdfs/aigc-heritage.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white text-xs font-medium rounded-lg hover:bg-slate-800 transition-colors">
+                    Preview Full PDF
+                </a>
+                <a href="../pdfs/aigc-heritage.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 border border-slate-300 text-slate-700 text-xs font-medium rounded-lg hover:bg-slate-50 transition-colors">
+                    Download PDF
+                </a>
+            </div>
+        </div>
+
+        <div class="prose prose-slate max-w-none space-y-8 text-slate-700 leading-relaxed text-[15px]">
+
+            <section>
+                <h2 class="text-xl font-serif font-semibold text-slate-900 mb-3">Abstract</h2>
+                <p>Against the backdrop of global cultural heritage conservation and the digital humanities turn, Yuanmingyuan is not only the pinnacle of classical Chinese garden art but also a symbolic presence of cultural collision, trauma, and rebirth in modern history. With the rapid development of generative artificial intelligence (AIGC) technologies, the digital conservation of cultural heritage is shifting from static “precise restoration” toward dynamic “creative translation.” Taking historical maps of Yuanmingyuan as the core spatial information carrier, this study introduces two heterogeneous visual languages—Islamic geometric style and Macau-Portuguese Azulejo tile painting—and explores pathways and possibilities for cross-cultural visual style translation through human-AI collaborative design practice. The research positions this process as intersemiotic translation and constructs a “Four-Stage Human-AI Collaborative Pathway” (HAI-IT), documenting in detail the specific decisions involved in material deconstruction, prompt engineering, iterative generation, and critical curation.</p>
+                <p>The core contributions are threefold: first, the proposal and validation of a transferable human-AI collaborative intersemiotic translation framework (HAI-IT); second, the revelation, through a dual-style comparative experiment, of the tension between “structural fidelity” and “intensity of stylistic transformation” in AIGC-mediated translation; and third, the demonstration of the irreplaceable role of the designer as “cultural gatekeeper” in the generative process. The results indicate that AIGC is not merely a style-transfer tool but a generative intermediary that continuously compels designers to negotiate the preservation and reconfiguration of cultural genes. This study provides an operable case model for intelligent heritage visualization and opens new pathways for innovative practices of cultural heritage from a design studies perspective.</p>
+                <p class="text-sm text-slate-500 mt-2"><strong>Keywords:</strong> cross-cultural translation; visual style translation; intersemiotic translation; AIGC; Yuanmingyuan; Islamic geometry; Azulejo; human-AI co-creation; design heritage</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-serif font-semibold text-slate-900 mb-3">1. Introduction: The Contemporary Turn of Digital Humanities and Cultural Heritage</h2>
+                <p>Yuanmingyuan (Garden of Perfect Brightness), known as the “Garden of Gardens,” embodies the Qing imperial court’s ultimate pursuit of cosmic order and earthly paradise through its spatial layout, architectural styles, and water systems.<sup>1</sup> The catastrophe of 1860 reduced this magnificent garden to ruins, leaving only historical documents, Yangshi Lei drawings, and a limited number of images as the foundation for later cultural imagination and digital restoration.<sup>2</sup> In the contemporary context of global cultural heritage conservation and transmission, the question is no longer limited to how to “restore” the garden with the highest fidelity, but rather how to effectively reactivate its visual heritage within different cultural and semiotic systems.</p>
+                <p>With the explosive development of AIGC technologies, the digital conservation of cultural heritage is shifting from static “precise restoration” to dynamic “creative translation.”<sup>3</sup> Based on deep learning and generative adversarial networks, AIGC demonstrates significant potential for extracting, deconstructing, and recombining cultural genes, providing designers with new tools for cross-temporal and cross-regional cultural dialogue. This study aims to conduct cross-cultural visual style translation of Yuanmingyuan maps—the core spatial information carrier—through AIGC technologies, introducing the “Islamic geometric style” and the “Macau-Portuguese Azulejo style” as two heterogeneous cultural languages, thereby exploring new narrative pathways and aesthetic expressions for cultural heritage in the digital age.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-serif font-semibold text-slate-900 mb-3">2. Research Background and Related Literature</h2>
+                <p>Yuanmingyuan comprises three gardens—Yuanmingyuan, Changchunyuan, and Qichunyuan—whose spatial layout follows the principle of “creating scenery with water,” with water systems occupying an extremely high proportion of the entire complex.<sup>4</sup> From the perspective of the history of visual communication design, maps of Yuanmingyuan are not merely records of geographic information but condensations of imperial power and landscape aesthetics. Historical maps such as the <em>Complete Map of the Three Gardens of Yuanming, Changchun, and Wanchun</em>, Jin Xun’s <em>Original Appearance Map of Yuanmingyuan</em> (1924), and the 1933 measured survey maps employ unique scatter-point perspective and freehand techniques to transform complex spatial relationships into planar symbolic systems.<sup>5</sup></p>
+
+                <figure class="my-8">
+                    <img src="images/yuan-fig1-historical-maps.jpg" alt="Figure 1. Historical reference maps of Yuanmingyuan" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                    <figcaption class="text-center text-sm text-slate-500 mt-3">Figure 1. Historical reference maps of Yuanmingyuan (top: Aerial View of the Three Gardens: Yuanmingyuan, Changchunyuan, and Qichunyuan by Bai Rixin, 1979; bottom: Aerial View Restoration Map of Yuanmingyuan at Its Peak by Zhang Baocheng, 2004)</figcaption>
+                </figure>
+
+                <p>Islamic geometric patterns constitute one of the three pillars of Islamic decorative art (the other two being calligraphy and vegetal motifs). Owing to religious prohibitions against figurative imagery, geometric art developed to an extremely high degree of complexity. Its core principle is based on the division of the circle, generating squares, triangles, and polygons that construct infinitely extensible tessellation systems through translation, rotation, and reflection.<sup>6</sup> At the symbolic level, the circle signifies unity and diversity, while patterns such as the eight-pointed star symbolize the infinity of Allah. This highly rational, algorithmic visual system possesses an inherent compatibility with the underlying computational logic of AIGC.</p>
+                <p>The term Azulejo derives from the Arabic “al-zulayj,” meaning “polished little stone.” Originally introduced to the Iberian Peninsula by the Moors, it gradually evolved in Portugal from purely geometric decoration into a narrative art form and, under the influence of Chinese blue-and-white porcelain in the seventeenth century, established its classic blue-and-white palette.<sup>7</sup> When this art form arrived in Macau with the Portuguese, it initiated a unique cross-cultural dialogue. Macau’s tile paintings retain European compositional logic while incorporating local landscapes, architecture, and scenes of daily life, becoming a visual representation of the harmonious coexistence of Chinese and Western cultures.</p>
+                <p>At the theoretical level, this study draws on Roman Jakobson’s concept of intersemiotic translation, understanding visual style translation as the transposition of meaning from one semiotic system to another.<sup>8</sup> Salvatore Zingale regards design as a translational activity, emphasizing that design mediates the transformation of vague social needs or cultural imagery into concrete artifacts.<sup>9</sup> These theories provide an analytical framework for understanding the preservation and reconfiguration of “cultural genes” in cross-cultural visual translation.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-serif font-semibold text-slate-900 mb-3">3. Theoretical Framework and Methodology: The Four-Stage Human-AI Collaborative Pathway</h2>
+                <p>This study defines “style translation” as the process of re-encoding the semantic structure and spatial logic of the source object (Yuanmingyuan maps) through a specific artistic grammar (Islamic geometry or Azulejo). This translation is not a simple filter overlay but a deep reconstruction based on semiotic principles. With the intervention of AIGC, design behavior is transformed into prompt-driven heuristic exploration, in which AI models fuse feature vectors of different cultures in latent space, thereby producing visual outputs that are both novel and culturally logical.</p>
+                <p>The study constructs a “Four-Stage Human-AI Collaborative Pathway” (Human-AI Collaborative Intersemiotic Translation Framework, abbreviated as HAI-IT):</p>
+
+                <figure class="my-8">
+                    <img src="images/yuan-fig2-hai-it.jpg" alt="Figure 2. Four-stage Human-AI Collaborative Intersemiotic Translation Framework (HAI-IT)" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                    <figcaption class="text-center text-sm text-slate-500 mt-3">Figure 2. Four-stage Human-AI Collaborative Intersemiotic Translation Framework (HAI-IT)</figcaption>
+                </figure>
+
+                <h3 class="text-lg font-serif font-medium text-slate-800 mt-6 mb-2">Stage 1: Material Deconstruction and Cultural Gene Extraction</h3>
+                <p>A structured analysis was conducted on historical maps of Yuanmingyuan. Through scanning and digital processing of the <em>Forty Views of the Qianlong Era</em> and Yangshi Lei archives, the topological structure of the garden was extracted, including core water bodies (such as Fuhai), major architectural axes (such as from the Great Palace Gate to the Zhengda Guangming Hall), and the boundaries of various scenic areas. Concurrently, “visual annotation” was performed on the two target styles: for Islamic geometry, the identification of basic grids, symmetry groups, and color spectra; for Azulejo, the analysis of brushstroke edge diffusion effects, blue saturation hierarchies, and the complexity of border decorations.</p>
+
+                <figure class="my-8">
+                    <img src="images/yuan-table1-schemes.jpg" alt="Table 1. Comparative dimensions of the two translation schemes" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                    <figcaption class="text-center text-sm text-slate-500 mt-3">Table 1. Comparative dimensions of the two translation schemes</figcaption>
+                </figure>
+
+                <figure class="my-8">
+                    <img src="images/yuan-fig3-base-maps.jpg" alt="Figure 3. Historical base maps of Yuanmingyuan" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                    <figcaption class="text-center text-sm text-slate-500 mt-3">Figure 3. Historical base maps of Yuanmingyuan (left: basic base map; right: excerpt from Jin Xun’s Original Appearance Map of Yuanmingyuan)</figcaption>
+                </figure>
+
+                <h3 class="text-lg font-serif font-medium text-slate-800 mt-6 mb-2">Stage 2: Model Selection and Prompt Engineering</h3>
+                <p>Diffusion models such as “Jimeng” were primarily employed. Prompt design followed a hierarchical structure of “structure + style + detail.” Positive prompts emphasized “abstract plan map of Yuanmingyuan, Islamic geometric style, complex and precise geometric patterns… water systems represented by blue geometric banded forms, buildings marked by small golden geometric units.” Negative prompts excluded realistic photography, three-dimensional perspective, messy lines, and similar elements. Designers iteratively refined prompts multiple times to address the AI model’s insufficient understanding of complex geographic coordinates.</p>
+                <p>① Positive Prompts: “Map of Yuanmingyuan, top-down view, central octagon water body as Fuhai, surrounding intricate Islamic geometric patterns, girih interlocking system, 8-pointed stars, vibrant cobalt blue and gold palette, high precision, architectural nodes represented as golden stars.”</p>
+                <p>② Negative Prompts: “Realistic photography, 3D perspective, messy lines, text, human figures, chaotic colors, blurred textures.”</p>
+
+                <figure class="my-8">
+                    <img src="images/yuan-fig4-survey-styles.jpg" alt="Figure 4. Survey references for Macau blue-and-white porcelain and Islamic geometric styles" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                    <figcaption class="text-center text-sm text-slate-500 mt-3">Figure 4. Survey references for Macau blue-and-white porcelain and Islamic geometric styles</figcaption>
+                </figure>
+
+                <h3 class="text-lg font-serif font-medium text-slate-800 mt-6 mb-2">Stage 3: Iterative Generation and Style Transfer</h3>
+                <p>Image-to-image (Img2Img) functionality was utilized, taking the original Yuanmingyuan map as the base image and adjusting denoising strength to achieve visual translation. Initial generation employed low denoising strength to preserve base contours; the detail-enhancement stage increased denoising strength to inject stylistic features; local adjustments used Inpainting to correct erroneous nodes; style fusion injected edge constraints via ControlNet.</p>
+
+                <figure class="my-8">
+                    <img src="images/yuan-fig5-islamic-iter.jpg" alt="Figure 5. Examples of the iterative generation process for Islamic geometric style" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                    <figcaption class="text-center text-sm text-slate-500 mt-3">Figure 5. Examples of the iterative generation process for Islamic geometric style</figcaption>
+                </figure>
+
+                <figure class="my-8">
+                    <img src="images/yuan-fig6-azulejo-iter.jpg" alt="Figure 6. Examples of the iterative generation process for Macau blue-and-white porcelain style" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                    <figcaption class="text-center text-sm text-slate-500 mt-3">Figure 6. Examples of the iterative generation process for Macau blue-and-white porcelain style</figcaption>
+                </figure>
+
+                <h3 class="text-lg font-serif font-medium text-slate-800 mt-6 mb-2">Stage 4: Expert Review and Post-Production</h3>
+                <p>AI-generated outputs required human aesthetic intervention. Designers performed color correction and contrast enhancement based on color theory and historical accuracy, adding professional design metadata such as scale bars, decorative borders, and textual annotations, ultimately producing design works that meet academic standards.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-serif font-semibold text-slate-900 mb-3">4. Case Studies and Design Analysis</h2>
+
+                <h3 class="text-lg font-serif font-medium text-slate-800 mt-6 mb-2">4.1 Islamic Geometric Style Translation: Order, Abstraction, and Infinity</h3>
+                <p>In this scheme, the organic landscape morphology of Yuanmingyuan is thoroughly “mathematized.” The regular octagonal water body of Fuhai at the center becomes the visual anchor, radiating outward in a fractal geometric network. The originally natural and winding lake shores are transformed into precisely fitted geometric edges, embodying a cross-cultural drift from the natural philosophy of “unity of heaven and humanity” toward a cosmological view of “mathematical divinity.”<sup>10</sup> The image exhibits non-focal, all-over characteristics, guiding viewers to experience immersion through a sense of overall order. The contrast between indigo and gold intensifies the imagery of “starry sky” and “flowing water,” elevating the imperial garden into a metaphysical spiritual realm.</p>
+                <p>The design breakthrough lies in deliberately abandoning the landscape freehand style and scatter-point perspective conventionally used in traditional Chinese garden maps, instead employing a highly abstract and rational geometric language to represent an Eastern imperial garden. This cross-cultural visual conversion, on the one hand, amplifies and emphasizes the spatial order of Yuanmingyuan at the geometric level; on the other hand, it places “cultural heritage” within a broader dialogue of civilizations.</p>
+
+                <figure class="my-8">
+                    <img src="images/yuan-fig7-islamic-final.jpg" alt="Figure 7. Final translation work of Yuanmingyuan in Islamic geometric style" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                    <figcaption class="text-center text-sm text-slate-500 mt-3">Figure 7. Final translation work of Yuanmingyuan in Islamic geometric style</figcaption>
+                </figure>
+
+                <h3 class="text-lg font-serif font-medium text-slate-800 mt-6 mb-2">4.2 Macau-Portuguese Azulejo Style Translation: Memory, Hybridity, and Warmth</h3>
+                <p>This scheme presents a distinctly different “historical warmth.” The image retains the brushstroke texture of hand-painted blue-and-white porcelain; subtle glaze reflections at the edges make the paper map appear as if it were a ceramic mural embedded on a building façade. This treatment endows “geographic information” with “materiality,” implying the tactile quality of Yuanmingyuan as a World Cultural Heritage site. Decorative borders incorporate a combination of wave patterns and Chinese ruyi motifs, echoing Macau’s identity as a node on the Maritime Silk Road. Names of scenic areas appear in the form of antique tile plaques, serving not only navigational functions but also constructing an atmosphere of “historical presence.”</p>
+                <p>The blue-and-white palette resonates with Chinese porcelain, while the compositional logic exhibits clear European regularity, perfectly interpreting Yuanmingyuan’s original intention of “Sino-Western hybridity.” This translation draws upon Azulejo—an art form bearing traces of colonial and trade history—to metaphorize the complexity and integrative force of civilizational exchange. In sharp contrast to the “abstract order” of the Islamic geometric scheme, the Azulejo scheme adopts a translation logic of “decoration and materialization.” It does not pursue thorough geometric purification; instead, while retaining the original map framework and content elements (the three-garden divisions and architectural annotations), it injects the blue-and-white dual color, hand-drawn lines, and vine motifs, transforming the map itself into a craft object that can be “touched.” The blue-and-white palette echoes Chinese porcelain, while the compositional logic displays distinct European regularity, perfectly interpreting the original “Sino-Western hybrid” intent of Yuanmingyuan. This translation, by means of an art form marked by colonial and trade historical traces, metaphors the complexity and integrative power of civilizational exchange, and also provides another possible pathway for cross-cultural visual translation—not the elimination of difference, but the coexistence of difference at the levels of materiality and memory.</p>
+
+                <figure class="my-8">
+                    <img src="images/yuan-fig8-azulejo-final.jpg" alt="Figure 8. Final translation work of Yuanmingyuan in the style of Macau-Portuguese Azulejo tile paintings" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                    <figcaption class="text-center text-sm text-slate-500 mt-3">Figure 8. Final translation work of Yuanmingyuan in the style of Macau-Portuguese Azulejo tile paintings</figcaption>
+                </figure>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-serif font-semibold text-slate-900 mb-3">5. Discussion: Critical Human-AI Collaboration and Heritage Ethics</h2>
+                <p>The greatest challenge in using AIGC for heritage translation lies in the “crisis of authenticity.” The stochastic generation of AI may lead to distortions of historical facts. It is recommended that future design practice establish specialized LoRA models based on the “Yangshi Lei” dataset to constrain AI training, ensuring that basic structural features of the garden are consistently respected during the stylization process.</p>
+                <p>The study further finds that AI tends to generate images conforming to mainstream and popular aesthetics while overlooking subtle yet culturally significant details. Designers should not become mere “prompt inputters” but should act as “cultural gatekeepers,” employing professional knowledge to filter and revise AI-generated content, thereby ensuring that the translation process possesses academic depth rather than mere visual consumption.<sup>11</sup></p>
+                <p>Directions for further research include: translation from two-dimensional to three-dimensional forms, utilizing text-to-3D technologies to convert stylized maps into interactive three-dimensional scenes; cross-modal emotional generation, synchronously generating music or narrative texts that match the emotional tone of the style in conjunction with visual images; and global collaborative design, leveraging AIGC’s cross-lingual capabilities to invite users from different cultural backgrounds to participate jointly in the “stylistic re-imagination” of Yuanmingyuan.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-serif font-semibold text-slate-900 mb-3">6. Conclusion: Civilizational Dialogue under the Mirror of Technology</h2>
+                <p>Through the AIGC visual translation of Yuanmingyuan maps, this study demonstrates the core value of artificial intelligence in the digital innovation of cultural heritage. From the rational abstraction of Islamic geometry to the warm narrative of Azulejo, technology functions not only as a transmitter of style but also as a producer of meaning, bridging the fissure between history and the future.</p>
+                <p>This practice reveals a new paradigm of cultural heritage conservation: it should not be regarded merely as a specimen requiring sealed protection, but as a continuously growing “cultural genome” that radiates new visual vitality through collisions with different technologies and civilizations. Although AIGC brings new challenges of control, ethics, and copyright, under the rational guidance of designers, this act of “translation” will greatly enrich humanity’s collective memory and aesthetic imagination of historical heritage. Rendered by digital computational power, the maps of Yuanmingyuan are transcending the glory of the Qing dynasty and the ruins of 1860, moving toward a more plural, open, and intelligent digital future.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-serif font-semibold text-slate-900 mb-3">References</h2>
+                <ul class="list-none space-y-2 text-sm">
+                    <li>Bonner, J. (2017). <em>Islamic Geometric Patterns: Their Historical Development and Traditional Methods of Construction</em>. Springer. <a href="https://doi.org/10.1007/978-1-4419-0217-7" target="_blank" class="text-sky-600 hover:underline">https://doi.org/10.1007/978-1-4419-0217-7</a></li>
+                    <li>Guo, D. (2010). <em>The Memory of Yuanmingyuan: From the Garden of Gardens to Ruins</em>. Beijing: Beijing Publishing House. Related Yangshi Lei research: <a href="https://book.douban.com/subject/6090955/" target="_blank" class="text-sky-600 hover:underline">https://book.douban.com/subject/6090955/</a></li>
+                    <li>Jakobson, R. (1959). On Linguistic Aspects of Translation. In R. A. Brower (Ed.), <em>On Translation</em> (pp. 232–239). Harvard University Press. <a href="https://web.stanford.edu/~eckert/PDF/jakobson.pdf" target="_blank" class="text-sky-600 hover:underline">https://web.stanford.edu/~eckert/PDF/jakobson.pdf</a></li>
+                    <li>Jin, X. (1924). <em>Original Appearance Map of Yuanmingyuan</em>.</li>
+                    <li>Li, C., Ye, Z., Wen, W., Li, L., &amp; Shao, J. (2025). Beyond Photorealism: An AIGC-Powered Framework for Stylized and Gamified Cultural Heritage Revitalization. <em>Buildings</em>, 15(20), 3782. <a href="https://doi.org/10.3390/buildings15203782" target="_blank" class="text-sky-600 hover:underline">https://doi.org/10.3390/buildings15203782</a></li>
+                    <li>MIT Visualizing Cultures. (n.d.). The Garden of Perfect Brightness. Accessed July 2026. <a href="https://visualizingcultures.mit.edu" target="_blank" class="text-sky-600 hover:underline">https://visualizingcultures.mit.edu</a></li>
+                    <li>Zhong, R. (2025). The Evolution of Portuguese Tile Art: Blending and Transformation from the Homeland to Macao, China. <em>Chinese Studies</em>, 14, Article ID 144024. <a href="https://doi.org/10.4236/chnstd.2025.144024" target="_blank" class="text-sky-600 hover:underline">https://doi.org/10.4236/chnstd.2025.144024</a></li>
+                    <li>Zingale, S. (2016). Design as translation activity: A semiotic overview. In <em>Proceedings of DRS 2016: Future-Focused Thinking</em>. Design Research Society. <a href="https://doi.org/10.21606/drs.2016.401" target="_blank" class="text-sky-600 hover:underline">https://doi.org/10.21606/drs.2016.401</a></li>
+                </ul>
+            </section>
+
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-slate-200">
+            <a href="../index.html#research" class="text-sm text-sky-600 hover:underline">← Back to Research Themes</a>
+        </div>
+    </main>
+
+    <footer class="py-8 border-t border-slate-200 text-center text-xs text-slate-400">
+        <p>© 2026 Julie Liu · Design Researcher · University of Macau</p>
+    </footer>
+</body>
+</html>

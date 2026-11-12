@@ -7,13 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['PT Serif', 'Georgia', 'serif'],
+                        sans: ['Roboto', 'system-ui', 'sans-serif'],
                     },
                     colors: {
                         surface: {
@@ -27,7 +28,8 @@
         }
     </script>
     <style>
-        body { background-color: #FFFFFF; }
+        body { background-color: #FFFFFF; font-family: 'Roboto', system-ui, sans-serif; }
+        h1, h2, h3, h4, .serif { font-family: 'PT Serif', Georgia, serif; }
     </style>
 </head>
 <body class="bg-white text-slate-800 font-sans antialiased selection:bg-sky-100 selection:text-slate-900">
@@ -35,7 +37,7 @@
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-200">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#home" class="text-sm font-semibold tracking-wider uppercase text-slate-900 hover:text-sky-600 transition-colors">Julie Liu</a>
+            <a href="#home" class="text-sm font-semibold tracking-wider uppercase text-slate-900 hover:text-sky-600 transition-colors font-serif">Julie Liu</a>
             <div class="hidden md:flex space-x-8 text-xs font-medium tracking-widest uppercase text-slate-500">
                 <a href="#about" class="hover:text-slate-900 transition-colors">About</a>
                 <a href="#research" class="hover:text-slate-900 transition-colors">Research</a>
@@ -54,7 +56,7 @@
                 <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                 Seeking HCI PhD & Design Research Positions
             </div>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-900 leading-tight">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight text-slate-900 leading-tight">
                 Human-Centered AI for Digital Health, Embodied Interaction & Inclusive Technologies
             </h1>
             <p class="text-lg text-slate-600 font-light leading-relaxed max-w-3xl">
@@ -73,7 +75,7 @@
             </div>
 
             <div class="flex flex-wrap gap-4 pt-4">
-                <a href="#projects" class="px-6 py-3 bg-slate-900 text-white font-medium text-sm rounded-lg hover:bg-slate-800 transition-colors">View Research</a>
+                <a href="#research" class="px-6 py-3 bg-slate-900 text-white font-medium text-sm rounded-lg hover:bg-slate-800 transition-colors">View Research</a>
                 <a href="#cv" class="px-6 py-3 border border-slate-300 text-slate-800 font-medium text-sm rounded-lg hover:bg-slate-50 transition-colors">Download CV</a>
             </div>
         </div>
@@ -88,7 +90,7 @@
             <div class="md:col-span-8 space-y-12">
                 <!-- Professional Summary -->
                 <div class="space-y-4">
-                    <h3 class="text-2xl font-semibold text-slate-900">Professional Summary</h3>
+                    <h3 class="text-2xl font-serif font-semibold text-slate-900">Professional Summary</h3>
                     <p class="text-slate-600 leading-relaxed">
                         Design researcher and practitioner with several years of experience in digital product innovation, specializing in AI-driven health solutions and service system design. Demonstrated track record in incubating 0–1 digital health products for specific populations (maternal–child, chronic disease, and community healthcare), conducting business-oriented user research, and supporting technology commercialization pathways.
                     </p>
@@ -131,18 +133,18 @@
                         <h4 class="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-4">Selected Experience</h4>
                         <ul class="space-y-4 text-sm text-slate-700">
                             <li class="border-l-2 border-sky-500 pl-3">
-                                <strong class="text-slate-900">UX Design Expert, Alibaba Health</strong> (2021–2022)<br>
+                                <strong class="text-slate-900">UX Design Expert, Alibaba Health</strong><br>
                                 Led 0–1 incubation of AI-enhanced community healthcare and maternal–child tools. Delivered platforms achieving 15,500 DAU and NPS 47.72. Explored patentable innovations including sign-language semantic recognition and LBS-based queue optimization.
                             </li>
                             <li class="border-l-2 border-sky-500 pl-3">
-                                <strong class="text-slate-900">Design Manager, Opera Technology & CSF</strong> (2014–2021)<br>
+                                <strong class="text-slate-900">Design Manager, Opera Technology & CSF</strong><br>
                                 Directed design teams for fintech, e-commerce, and international-market products; launched platforms from concept through release.
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Professional Affiliations (moved here) -->
+                <!-- Professional Affiliations -->
                 <div class="pt-6 border-t border-slate-100">
                     <h4 class="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-4">Professional Affiliations</h4>
                     <ul class="space-y-2 text-sm text-slate-600">
@@ -155,7 +157,7 @@
         </div>
     </section>
 
-    <!-- Research Themes Section -->
+    <!-- Research Themes Section - Now clickable to secondary pages -->
     <section id="research" class="py-24 border-t border-slate-200 px-6 max-w-6xl mx-auto bg-slate-50/50">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
             <div class="md:col-span-4">
@@ -163,41 +165,45 @@
             </div>
             <div class="md:col-span-8 space-y-8">
                 <p class="text-slate-600 leading-relaxed">
-                    Research investigates the design of Human-Centered AI systems that support cognitive, emotional, and everyday health needs of specific populations. Methods integrate participatory design, reflexive thematic analysis, and iterative prototyping with generative AI, affective haptics, and multisensory interaction.
+                    Research investigates the design of Human-Centered AI systems that support cognitive, emotional, and everyday health needs of specific populations. Methods integrate participatory design, reflexive thematic analysis, and iterative prototyping with generative AI, affective haptics, and multisensory interaction. Click any theme below to view full project details.
                 </p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-                    <div class="p-6 bg-white border border-slate-200 rounded-xl space-y-3 shadow-sm">
+                    <a href="research/digital-health.html" class="block p-6 bg-white border border-slate-200 rounded-xl space-y-3 shadow-sm hover:border-emerald-400 hover:shadow-md transition-all group">
                         <span class="text-xs text-emerald-600 uppercase font-mono tracking-wider">Theme 01</span>
-                        <h3 class="text-lg font-semibold text-slate-900">Digital Health & Specific Populations</h3>
+                        <h3 class="text-lg font-serif font-semibold text-slate-900 group-hover:text-emerald-700">Digital Health & Specific Populations</h3>
                         <p class="text-sm text-slate-600 leading-relaxed">
                             Design and evaluation of AI-enhanced community healthcare tools for maternal–child and chronic-disease populations, emphasizing inclusive design, scenario-based service models, and measurable engagement outcomes.
                         </p>
-                    </div>
+                        <span class="inline-block text-xs text-emerald-600 font-medium mt-2">View details →</span>
+                    </a>
 
-                    <div class="p-6 bg-white border border-slate-200 rounded-xl space-y-3 shadow-sm">
+                    <a href="research/memory-cognitive.html" class="block p-6 bg-white border border-slate-200 rounded-xl space-y-3 shadow-sm hover:border-indigo-400 hover:shadow-md transition-all group">
                         <span class="text-xs text-indigo-600 uppercase font-mono tracking-wider">Theme 02</span>
-                        <h3 class="text-lg font-semibold text-slate-900">Memory & Cognitive Support</h3>
+                        <h3 class="text-lg font-serif font-semibold text-slate-900 group-hover:text-indigo-700">Memory & Cognitive Support</h3>
                         <p class="text-sm text-slate-600 leading-relaxed">
                             Human-centered design of multisensory AI systems (RetroLight) for reconstructing fragmented memories in Alzheimer’s disease, together with critical analysis of synthetic-memory generation and its ethical implications for dementia care.
                         </p>
-                    </div>
+                        <span class="inline-block text-xs text-indigo-600 font-medium mt-2">View details →</span>
+                    </a>
 
-                    <div class="p-6 bg-white border border-slate-200 rounded-xl space-y-3 shadow-sm">
+                    <a href="research/affective-haptics.html" class="block p-6 bg-white border border-slate-200 rounded-xl space-y-3 shadow-sm hover:border-pink-400 hover:shadow-md transition-all group">
                         <span class="text-xs text-pink-600 uppercase font-mono tracking-wider">Theme 03</span>
-                        <h3 class="text-lg font-semibold text-slate-900">Affective Haptics for Autism</h3>
+                        <h3 class="text-lg font-serif font-semibold text-slate-900 group-hover:text-pink-700">Affective Haptics for Autism</h3>
                         <p class="text-sm text-slate-600 leading-relaxed">
                             Multimodal systems that pair AI-personalised storytelling with synchronised pneumatic haptics to support emotional recognition and regulation in autistic children, grounded in expert participatory evaluation.
                         </p>
-                    </div>
+                        <span class="inline-block text-xs text-pink-600 font-medium mt-2">View details →</span>
+                    </a>
 
-                    <div class="p-6 bg-white border border-slate-200 rounded-xl space-y-3 shadow-sm">
+                    <a href="research/aigc-heritage.html" class="block p-6 bg-white border border-slate-200 rounded-xl space-y-3 shadow-sm hover:border-amber-400 hover:shadow-md transition-all group">
                         <span class="text-xs text-amber-600 uppercase font-mono tracking-wider">Theme 04</span>
-                        <h3 class="text-lg font-semibold text-slate-900">AIGC & Cultural Heritage</h3>
+                        <h3 class="text-lg font-serif font-semibold text-slate-900 group-hover:text-amber-700">AIGC & Cultural Heritage</h3>
                         <p class="text-sm text-slate-600 leading-relaxed">
                             Human–AI collaborative intersemiotic translation of historical visual heritage (Yuanmingyuan maps) across cultural visual languages, formalised in the four-stage HAI-IT framework.
                         </p>
-                    </div>
+                        <span class="inline-block text-xs text-amber-600 font-medium mt-2">View details →</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -219,7 +225,7 @@
                     <div class="flex flex-wrap justify-between items-start gap-3">
                         <div>
                             <span class="text-xs text-slate-500 uppercase tracking-wider font-mono">Alibaba Health · Industry Incubation</span>
-                            <h3 class="text-xl font-bold text-slate-900 mt-1">AI-Driven Digital Product Innovation for Maternal–Child Community Healthcare</h3>
+                            <h3 class="text-xl font-serif font-bold text-slate-900 mt-1">AI-Driven Digital Product Innovation for Maternal–Child Community Healthcare</h3>
                         </div>
                         <span class="text-xs px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded">15,500 DAU · NPS 47.72</span>
                     </div>
@@ -233,7 +239,7 @@
                     <div class="flex flex-wrap justify-between items-start gap-3">
                         <div>
                             <span class="text-xs text-slate-500 uppercase tracking-wider font-mono">Speculative Service Concept</span>
-                            <h3 class="text-xl font-bold text-slate-900 mt-1">Aura Healthy — Proactive AI-Driven Health Intelligence System</h3>
+                            <h3 class="text-xl font-serif font-bold text-slate-900 mt-1">Aura Healthy — Proactive AI-Driven Health Intelligence System</h3>
                         </div>
                         <span class="text-xs px-2.5 py-1 bg-indigo-50 text-indigo-700 border border-indigo-200 rounded">Concept · Future Health</span>
                     </div>
@@ -247,7 +253,7 @@
                     <div class="flex flex-wrap justify-between items-start gap-3">
                         <div>
                             <span class="text-xs text-slate-500 uppercase tracking-wider font-mono">Memory Rehabilitation · HCAI</span>
-                            <h3 class="text-xl font-bold text-slate-900 mt-1">RetroLight: AI for Recalling and Reconstructing Fragmented Memories</h3>
+                            <h3 class="text-xl font-serif font-bold text-slate-900 mt-1">RetroLight: AI for Recalling and Reconstructing Fragmented Memories</h3>
                         </div>
                         <span class="text-xs px-2.5 py-1 bg-sky-50 text-sky-700 border border-sky-200 rounded">Alzheimer’s · Multisensory</span>
                     </div>
@@ -261,7 +267,7 @@
                     <div class="flex flex-wrap justify-between items-start gap-3">
                         <div>
                             <span class="text-xs text-slate-500 uppercase tracking-wider font-mono">Affective Haptics · Autism</span>
-                            <h3 class="text-xl font-bold text-slate-900 mt-1">EmoLearn: AI-Personalised Storytelling with Synchronised Pneumatic Haptics</h3>
+                            <h3 class="text-xl font-serif font-bold text-slate-900 mt-1">EmoLearn: AI-Personalised Storytelling with Synchronised Pneumatic Haptics</h3>
                         </div>
                         <span class="text-xs px-2.5 py-1 bg-pink-50 text-pink-700 border border-pink-200 rounded">ASD · Design Research</span>
                     </div>
@@ -275,7 +281,7 @@
                     <div class="flex flex-wrap justify-between items-start gap-3">
                         <div>
                             <span class="text-xs text-slate-500 uppercase tracking-wider font-mono">AIGC · Cultural Heritage</span>
-                            <h3 class="text-xl font-bold text-slate-900 mt-1">Cross-Cultural Visual Heritage Translation of Yuanmingyuan Maps</h3>
+                            <h3 class="text-xl font-serif font-bold text-slate-900 mt-1">Cross-Cultural Visual Heritage Translation of Yuanmingyuan Maps</h3>
                         </div>
                         <span class="text-xs px-2.5 py-1 bg-amber-50 text-amber-700 border border-amber-200 rounded">HAI-IT Framework</span>
                     </div>
@@ -295,27 +301,27 @@
             </div>
             <div class="md:col-span-8 space-y-6">
                 <article class="p-5 border-l-4 border-emerald-500 bg-white space-y-2 shadow-sm">
-                    <h3 class="text-base font-semibold text-slate-900">Feeling the Story: AI-Personalised Storytelling with Synchronised Pneumatic Haptics for Emotional Learning in Autistic Children</h3>
+                    <h3 class="text-base font-serif font-semibold text-slate-900">Feeling the Story: AI-Personalised Storytelling with Synchronised Pneumatic Haptics for Emotional Learning in Autistic Children</h3>
                     <p class="text-sm text-slate-600">Presents the EmoLearn system and five design learnings (DL1–DL5) derived from reflexive thematic analysis of multidisciplinary expert interviews. Contributes a multimodal affective-haptic design approach for pervasive emotional-learning technology.</p>
                 </article>
 
                 <article class="p-5 border-l-4 border-indigo-500 bg-white space-y-2 shadow-sm">
-                    <h3 class="text-base font-semibold text-slate-900">Artificial Intelligence for Recalling and Reconstructing Fragmented Memories: Human-Centered Design of Memory Recall Interventions for Alzheimer’s Disease</h3>
+                    <h3 class="text-base font-serif font-semibold text-slate-900">Artificial Intelligence for Recalling and Reconstructing Fragmented Memories: Human-Centered Design of Memory Recall Interventions for Alzheimer’s Disease</h3>
                     <p class="text-sm text-slate-600">Introduces RetroLight, a personalised multisensory memory-activation system integrating AIGC with panoramic visuals, spatial audio, and olfactory stimuli. Advances non-pharmacological approaches to cognitive intervention.</p>
                 </article>
 
                 <article class="p-5 border-l-4 border-purple-500 bg-white space-y-2 shadow-sm">
-                    <h3 class="text-base font-semibold text-slate-900">Ethical and Critical Analysis of Reconstructing Memories for Individuals with Cognitive Impairment Through AI Technologies</h3>
+                    <h3 class="text-base font-serif font-semibold text-slate-900">Ethical and Critical Analysis of Reconstructing Memories for Individuals with Cognitive Impairment Through AI Technologies</h3>
                     <p class="text-sm text-slate-600">Case study of Google’s Synthetic Memories project. Examines the paradox of subjective versus algorithmic truth, modal and sensory limitations, and implications for stakeholder-inclusive human-centered AI design in dementia care.</p>
                 </article>
 
                 <article class="p-5 border-l-4 border-amber-500 bg-white space-y-2 shadow-sm">
-                    <h3 class="text-base font-semibold text-slate-900">Translation of Visual Heritage in a Cross-Cultural Context: A Study on Visual Style Translation of Yuanmingyuan Maps Using AIGC Technologies</h3>
+                    <h3 class="text-base font-serif font-semibold text-slate-900">Translation of Visual Heritage in a Cross-Cultural Context: A Study on Visual Style Translation of Yuanmingyuan Maps Using AIGC Technologies</h3>
                     <p class="text-sm text-slate-600">Proposes the HAI-IT four-stage framework for human–AI collaborative intersemiotic translation. Reveals the tension between structural fidelity and stylistic transformation intensity, and affirms the designer’s role as cultural gatekeeper.</p>
                 </article>
 
                 <article class="p-5 border-l-4 border-sky-500 bg-white space-y-2 shadow-sm">
-                    <h3 class="text-base font-semibold text-slate-900">AI-Driven Digital Product Innovation Practice for Specific Population Groups in Community Healthcare Settings — A Case Study on Creating Medical Maternal and Child Care Tools</h3>
+                    <h3 class="text-base font-serif font-semibold text-slate-900">AI-Driven Digital Product Innovation Practice for Specific Population Groups in Community Healthcare Settings — A Case Study on Creating Medical Maternal and Child Care Tools</h3>
                     <p class="text-sm text-slate-600">Documents market-oriented design of vertical tools and community platforms for maternal–child populations. Provides empirical evidence for inclusive, AI-supported service design in community healthcare.</p>
                 </article>
             </div>
@@ -331,13 +337,12 @@
             <div class="md:col-span-8 space-y-8">
                 <div class="p-8 bg-slate-50 border border-slate-200 rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
                     <div>
-                        <h3 class="text-xl font-bold text-slate-900">Julie Liu</h3>
+                        <h3 class="text-xl font-serif font-bold text-slate-900">Julie Liu</h3>
                         <p class="text-sm text-slate-600 mt-1">Design Researcher · Human-Centered AI for Digital Health & Technology Commercialization</p>
                         <p class="text-sm text-slate-500 mt-2">julie.liujia@gmail.com · +(853) 62018936 · +(86) 133 7171 5290</p>
                     </div>
-                    <a href="/home/workdir/attachments/2026 RESUME_EN.pdf" 
-                       class="px-6 py-3 bg-slate-900 text-white font-semibold text-xs uppercase tracking-wider rounded-lg hover:bg-slate-800 transition-colors whitespace-nowrap"
-                       download>
+                    <a href="#" 
+                       class="px-6 py-3 bg-slate-900 text-white font-semibold text-xs uppercase tracking-wider rounded-lg hover:bg-slate-800 transition-colors whitespace-nowrap">
                         Download Full CV (PDF)
                     </a>
                 </div>

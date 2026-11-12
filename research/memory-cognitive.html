@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory & Cognitive Support | Julie Liu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['PT Serif', 'Georgia', 'serif'],
+                        sans: ['Roboto', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Roboto', system-ui, sans-serif; }
+        h1, h2, h3, h4, .serif { font-family: 'PT Serif', Georgia, serif; }
+        figure img { max-width: 100%; height: auto; }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+    <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
+            <a href="../index.html" class="text-sm font-semibold tracking-wider uppercase text-slate-900 hover:text-sky-600 transition-colors font-serif">← Julie Liu</a>
+            <a href="../index.html#research" class="text-xs text-slate-500 hover:text-slate-900">Research Themes</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-20 px-6 max-w-4xl mx-auto">
+        <div class="mb-6">
+            <span class="text-xs text-indigo-600 uppercase font-mono tracking-wider">Theme 02 · Essay / Design Research</span>
+            <h1 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mt-3 leading-tight">
+                Artificial Intelligence for Recalling and Reconstruction of Fragmented Memories: Human-Centered Design of Memory Recall Interventions for Alzheimer's Disease
+            </h1>
+            <p class="text-sm text-slate-500 mt-3">Macau University DDES 2025 · Mentor: Professor Luo Xuan · Student: Liu Jia Qun (MC569293)</p>
+            
+            <div class="mt-5 flex flex-wrap gap-3">
+                <a href="../pdfs/memory-cognitive.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white text-xs font-medium rounded-lg hover:bg-slate-800 transition-colors">
+                    Preview Full PDF
+                </a>
+                <a href="../pdfs/memory-cognitive.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 border border-slate-300 text-slate-700 text-xs font-medium rounded-lg hover:bg-slate-50 transition-colors">
+                    Download PDF
+                </a>
+            </div>
+        </div>
+
+        <div class="prose prose-slate max-w-none space-y-10 text-slate-700 leading-relaxed">
+
+            <!-- Abstract -->
+            <section>
+                <h2 class="text-xl font-serif font-semibold text-slate-900 mb-3">Abstract</h2>
+                <p>Alzheimer’s disease frequently leads to severe memory loss, and traditional reminiscence therapy utilizes cues such as old photographs and music to stimulate long-term memories. Although this approach can improve the well-being of older adults, it is often limited by single-modality delivery and a lack of personalization [1][2]. This study examines the integration of AI-generated content (AIGC) with multisensory interaction to reconstruct fragmented memory scenes dynamically.</p>
+                <p class="mt-3">This paper introduces <strong>RetroLight</strong>, a personalized and immersive, AI-powered multisensory memory-activation system. The system is built upon a “memory capsule” database that collects patients’ fragmented memories, including photographs, videos, sounds, scents, and tactile sensations, and a “scene cube” device that projects 360-degree panoramic visuals, spatial audio, and olfactory stimuli [3]. Methodologically, RetroLight employs human-centered design (HCD) alongside principles of human-centered AI (HCAI). Through iterative prototyping and participatory evaluation, the study assesses its effects on cognitive activation, opportunities, and well-being. Expected outcomes include novel approaches to memory reconstruction in cognitive interventions, innovative pathways for non-pharmacological interventions, and a reference model for AI-assisted, inclusive smart health systems.</p>
+                <p class="text-sm text-slate-500 mt-2"><strong>Keywords:</strong> Human-Centered AI (HCAI) · AI-Generated Content (AIGC) · Memory Reconstruction · Multisensory Interaction · Reminiscence Therapy (RT) · Alzheimer’s Disease (AD) · Research through Design (RTD) · Therapeutic Immersive Technology · Emotional Well-being · Inclusive Health Design</p>
+            </section>
+
+            <!-- 1. Introduction -->
+            <section>
+                <h2 class="text-xl font-serif font-semibold text-slate-900 mb-3">1. Introduction</h2>
+                <p>Alzheimer’s Disease (AD) and related dementias constitute a global health crisis, currently affecting over 55 million individuals worldwide, with prevalence projected to double within the next three decades due to population aging [4]. These neurodegenerative disorders cause progressive memory loss, language impairments, spatial disorientation, and personality changes, which collectively diminish patient independence and personhood. While pharmacological interventions provide symptomatic relief, their side effects and limited efficacy have sparked increased interest in non-pharmacological approaches.</p>
+                <p class="mt-3">Reminiscence Therapy (RT) is a well-established non-pharmacological intervention that utilizes photographs, music, or personally meaningful objects to stimulate long-term memory [1]. However, traditional RT faces three primary challenges: modality singularity, often relying solely on visual or auditory stimuli and failing to engage complex multisensory memory; lack of interactivity, with patients remaining largely passive; and insufficient personalization, which limits effectiveness for individuals with fragmented or long-lost early memories.</p>
+                <p class="mt-3">Recent advances in Generative AI (AIGC) and immersive interaction technologies open new possibilities for memory reconstruction rather than mere retrieval. This study introduces RetroLight, a personalized, multisensory, AI-powered memory-activation system designed to address these gaps through Human-Centered AI (HCAI) and Research through Design (RtD).</p>
+            </section>
+
+            <!-- 2. Related Work + Figure 1 (Table) -->
+            <section>
+                <h2 class="text-xl font-serif font-semibold text-slate-900 mb-3">2. Related Work (Literature Review)</h2>
+                <p>Recent research in medical and cognitive science demonstrates that reminiscence therapy (RT) is effective for addressing cognitive impairment. Systematic reviews and meta-analyses indicate that RT significantly improves cognitive function (SMD 0.74–1.15), reduces depressive symptoms, and enhances quality of life, with particularly notable benefits for individuals with mild cognitive impairment (MCI) [5][6][7].</p>
+                <p class="mt-3">Advancements in artificial intelligence (AI) have begun to address previously identified limitations in modality and personalization. Wang et al. (2024) introduced GoodTimes, a multimodal AI photo album that uses knowledge graphs and voice assistants to enable personalized dialogue [8][9]. Seah et al. (2026) presented Rememo at CHI 2026, a generative AI tool developed with therapist involvement that supports authentic memories to facilitate co-constructed narratives [10][11]. The Synthetic Memories project by Domestic Data Streamers (2025) employs generative AI to reconstruct images and videos from oral fragments and has been implemented in early-stage dementia reminiscence therapy [12][13].</p>
+
+                <figure class="my-8">
+                    <img src="images/fig1-comparison-table.jpg" alt="Table 1. Comparison of Recent AI-Supported Reminiscence Systems" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                    <figcaption class="text-center text-sm text-slate-500 mt-3">Table 1. Comparison of Recent AI-Supported Reminiscence Systems</figcaption>
+                </figure>
+
+                <p class="mt-3">Multisensory stimulation further strengthens therapeutic outcomes. Engaging multiple senses simultaneously (vision, hearing, touch, smell, and even taste) activates broader neural networks, particularly the limbic system. Olfactory pathways project directly to the amygdala and hippocampus, bypassing the thalamus and enabling rapid activation of emotional and autobiographical memories [16][24]. Tactile stimulation, mediated by mechanoreceptors and C-tactile afferents, triggers oxytocin release and enhances interoceptive awareness, which is often impaired in Alzheimer’s disease (AD) [25][26][27].</p>
+            </section>
+
+            <!-- 3. Design Opportunities + Figure 2 -->
+            <section>
+                <h2 class="text-xl font-serif font-semibold text-slate-900 mb-3">3. Design Opportunities Identified in the Literature</h2>
+                <p>A review of the literature identifies three primary design opportunities that inform the development of the RetroLight system.</p>
+                <ol class="list-decimal pl-5 space-y-3 mt-2">
+                    <li><strong>Personalized memory reconstruction through generative AI:</strong> Although systems such as GoodTimes and Rememo demonstrate the potential of AI-generated content (AIGC) to fill visual and narrative gaps [8][11], they remain largely unimodal and lack real-time adaptation to emotional states. This gap motivates RetroLight’s Memory Capsule, which synthesizes multimodal fragments into context-aware prompts.</li>
+                    <li><strong>Multisensory immersion to enhance emotional engagement:</strong> While multisensory stimulation (including olfactory and tactile cues) has shown strong clinical benefits, existing AI reminiscence tools rarely incorporate haptic or olfactory channels. This limitation highlights the opportunity for RetroLight’s Scene Cube to deliver ecologically valid, embodied memory experiences.</li>
+                    <li><strong>Biofeedback-driven closed-loop interaction for safety and reliability:</strong> Current systems lack real-time physiological monitoring, risking emotional overload. Building on human-centered AI (HCAI) principles [10], RetroLight introduces a closed-loop biosignal feedback mechanism to maintain high human control while ensuring emotional safety.</li>
+                </ol>
+
+                <figure class="my-8">
+                    <img src="images/fig2-traditional-vs-retrolight.jpg" alt="Traditional RT vs. RetroLight: A Comparative Diagram" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                    <figcaption class="text-center text-sm text-slate-500 mt-3">Figure 2. Traditional RT vs. RetroLight: A Comparative Diagram</figcaption>
+                </figure>
+            </section>
+
+            <!-- 4. Research Through Design Methodology + Figure 3 + Figure 4 -->
+            <section>
+                <h2 class="text-xl font-serif font-semibold text-slate-900 mb-3">4. Research Through Design Methodology</h2>
+                <p>The existing literature on Human-Centered Design (HCD) and Human-Centered AI (HCAI) emphasizes the need to prioritize users, such as patients, caregivers, and therapists, in dementia care technology development. RetroLight was developed using a human-centered design (HCD) framework that integrates Research Through Design (RtD) and Shneiderman’s HCAI principles. Four iterative prototyping rounds were conducted over six months.</p>
+
+                <figure class="my-8">
+                    <img src="images/fig3-rtd-process.jpg" alt="Research Through Design (RtD) iterative process for developing the RetroLight system" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                    <figcaption class="text-center text-sm text-slate-500 mt-3">Figure 3. Research Through Design (RtD) iterative process for developing the RetroLight system (4 rounds over 6 months)</figcaption>
+                </figure>
+
+                <figure class="my-8">
+                    <img src="images/fig4-participant-evaluation.jpg" alt="Participant Recruitment and Evaluation Framework" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                    <figcaption class="text-center text-sm text-slate-500 mt-3">Figure 4. Participant &amp; Evaluation Metrics Overview</figcaption>
+                </figure>
+            </section>
+
+            <!-- 5. System Design + Figure 5 + Figure 6 -->
+            <section>
+                <h2 class="text-xl font-serif font-semibold text-slate-900 mb-3">5. RetroLight System Design</h2>
+                <p>The system comprises three primary modules in a closed-loop architecture: (1) the <strong>Memory Capsule</strong> — a database collecting patients’ fragmented memories (photographs, videos, sounds, scents, and tactile sensations); (2) the <strong>Scene Cube</strong> — a device delivering 360-degree panoramic visuals, spatial audio, and olfactory stimuli; and (3) <strong>Biosignal Feedback</strong> for real-time closed-loop adaptation. Data flow and dynamic adaptation are managed by artificial intelligence-generated content (AIGC).</p>
+
+                <figure class="my-8">
+                    <img src="images/fig5-system-architecture.jpg" alt="Overview of the RetroLight System Architecture" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                    <figcaption class="text-center text-sm text-slate-500 mt-3">Figure 5. Overview of the RetroLight System Architecture</figcaption>
+                </figure>
+
+                <p class="mt-3">Programmable scent diffusers and haptic feedback recreate previous living environments. This methodology is intended to support memory reconstruction for individuals with cognitive impairments through multi-sensory immersive experiences.</p>
+
+                <figure class="my-8">
+                    <img src="images/fig6-usage-scenario.jpg" alt="Multi-Sensory Immersive Usage Scenario Diagram" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                    <figcaption class="text-center text-sm text-slate-500 mt-3">Figure 6. Multi-Sensory Immersive Usage Scenario Diagram</figcaption>
+                </figure>
+            </section>
+
+            <!-- 6. Results + Figure 7 + Figure 8 -->
+            <section>
+                <h2 class="text-xl font-serif font-semibold text-slate-900 mb-3">6. Preliminary Results and Evaluation</h2>
+                <p>Evaluation involved 13 participants (8 patients with Alzheimer’s disease, MMSE scores 10–24, and 5 caregivers) recruited via purposive sampling at a memory clinic. Metrics included MMSE (cognitive activation), PANAS (emotional well-being), and SUS (usability). Qualitative thematic analysis identified key findings around filling missing pieces of memory, increased narrative richness, and heightened emotional engagement.</p>
+
+                <figure class="my-8">
+                    <img src="images/fig7-results-overview.jpg" alt="Results Overview - Quantitative & Qualitative Summary" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                    <figcaption class="text-center text-sm text-slate-500 mt-3">Figure 7. Results Overview — Quantitative &amp; Qualitative Summary</figcaption>
+                </figure>
+
+                <figure class="my-8">
+                    <img src="images/fig8-prepost-comparison.jpg" alt="Pre-Post Comparison & Iterative Improvement" class="w-full rounded-lg border border-slate-200 shadow-sm">
+                    <figcaption class="text-center text-sm text-slate-500 mt-3">Figure 8. Pre-Post Comparison &amp; Iterative Improvement</figcaption>
+                </figure>
+            </section>
+
+            <!-- Discussion note -->
+            <section>
+                <h2 class="text-xl font-serif font-semibold text-slate-900 mb-3">7. Discussion and Conclusion</h2>
+                <p>The findings indicate that the AI-enhanced multisensory RetroLight system may transform traditional reminiscence therapy (RT) into a more active, personalized, and emotionally engaging intervention. Outcomes of richer narratives and deeper emotional engagement correspond with the three design opportunities identified in Section 3 and are substantiated by the preliminary results presented in Section 6. The system extends previous work on generative AI by emphasizing embodiment, real-time human–AI collaboration, and closed-loop safety for therapeutic design in aging and accessibility contexts.</p>
+            </section>
+
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-slate-200">
+            <a href="../index.html#research" class="text-sm text-sky-600 hover:underline">← Back to Research Themes</a>
+        </div>
+    </main>
+
+    <footer class="py-8 border-t border-slate-200 text-center text-xs text-slate-400">
+        <p>© 2026 Julie Liu · Design Researcher · University of Macau</p>
+    </footer>
+</body>
+</html>
